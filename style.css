@@ -1,0 +1,404 @@
+/* Color Palette */
+:root {
+    --color-white: #FFFFFF;
+    --color-light-gray: #F8F8F8;
+    --color-dark-blue-primary: #0A1128; /* Very dark blue for text, main elements */
+    --color-mid-blue-gradient-start: #1E3F66; /* Mid blue for gradients */
+    --color-light-blue-gradient-end: #2B88D8; /* Lighter blue for gradients, accents */
+    --color-button-hover-start: #2B88D8; /* Slightly different gradient for hover */
+    --color-button-hover-end: #1E3F66;
+}
+
+/* Global Styles & Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for navigation links */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--color-dark-blue-primary);
+    background-color: var(--color-light-gray); /* Professional light background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    color: var(--color-dark-blue-primary);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--color-mid-blue-gradient-start), var(--color-light-blue-gradient-end));
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Header */
+.header {
+    background-color: var(--color-white);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--color-dark-blue-primary);
+    background: linear-gradient(to right, var(--color-mid-blue-gradient-start), var(--color-light-blue-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.nav a {
+    color: var(--color-dark-blue-primary);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--color-light-blue-gradient-end);
+}
+
+/* Buttons (Pill-shaped with Gradient) */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px; /* Pill shape */
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 1.1em;
+    background-image: linear-gradient(45deg, var(--color-mid-blue-gradient-start) 0%, var(--color-light-blue-gradient-end) 100%);
+    background-size: 200% auto; /* For hover effect */
+    transition: all 0.4s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-position: right center; /* Shift gradient on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--color-white);
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden; /* For potential background effects if desired */
+}
+
+/* Subtle background gradient pattern */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    background: radial-gradient(circle at top left, rgba(43, 136, 216, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at bottom right, rgba(30, 63, 102, 0.05) 0%, transparent 40%);
+    z-index: 0;
+}
+
+.hero-section .container {
+    position: relative; /* Ensure content is above the pseudo-element */
+    z-index: 1;
+}
+
+.hero-slogan {
+    font-size: 4em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, var(--color-dark-blue-primary) 0%, var(--color-mid-blue-gradient-start) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.hero-tagline {
+    font-size: 1.5em;
+    color: var(--color-dark-blue-primary);
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-weight: 300;
+}
+
+.hero-button {
+    padding: 18px 40px;
+    font-size: 1.2em;
+}
+
+/* Services Section */
+.services-section {
+    background-color: var(--color-white);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.service-card {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 3em;
+    color: var(--color-light-blue-gradient-end);
+    margin-bottom: 20px;
+}
+
+.service-card h4 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: var(--color-dark-blue-primary);
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.cta-bottom {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--color-light-gray);
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #444;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--color-white);
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    padding: 40px;
+    background-color: var(--color-light-gray);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-dark-blue-primary);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    color: var(--color-dark-blue-primary);
+    background-color: var(--color-white);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-light-blue-gradient-end);
+    box-shadow: 0 0 0 3px rgba(43, 136, 216, 0.2);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.2em;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.contact-info a {
+    color: var(--color-dark-blue-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--color-light-blue-gradient-end);
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--color-mid-blue-gradient-start);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-dark-blue-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-slogan {
+        font-size: 3em;
+    }
+    .hero-tagline {
+        font-size: 1.3em;
+    }
+    .section-title {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+    }
+    .nav {
+        margin-top: 15px;
+    }
+    .nav a {
+        margin: 0 15px;
+    }
+    .hero-slogan {
+        font-size: 2.5em;
+    }
+    .hero-tagline {
+        font-size: 1.1em;
+    }
+    .section-padding {
+        padding: 60px 0;
+    }
+    .service-card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5em;
+    }
+    .nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    .hero-slogan {
+        font-size: 2em;
+    }
+    .hero-tagline {
+        font-size: 1em;
+    }
+    .button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-form {
+        padding: 25px;
+    }
+}
