@@ -72,7 +72,17 @@ body {
     align-items: center;
 }
 
-.logo {
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 40px; /* Adjust as needed */
+    margin-right: 15px;
+}
+
+.logo-text {
     font-size: 1.8em;
     font-weight: 700;
     color: var(--color-dark-blue-primary);
@@ -81,6 +91,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    white-space: nowrap; /* Prevent wrapping for long text */
 }
 
 .nav a {
@@ -174,7 +185,7 @@ body {
     font-size: 1.2em;
 }
 
-/* Services Section */
+/* Services Section (on index.html) */
 .services-section {
     background-color: var(--color-white);
 }
@@ -194,6 +205,8 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    text-decoration: none; /* Remove underline for links */
+    color: inherit; /* Inherit text color */
 }
 
 .service-card:hover {
@@ -336,6 +349,172 @@ body {
     font-size: 0.9em;
 }
 
+
+/* NEW: Dedicated Service Page Styles */
+.service-page-section {
+    background-color: var(--color-white);
+    padding: 80px 0;
+}
+
+.service-page-section h2 {
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    background: linear-gradient(45deg, var(--color-dark-blue-primary) 0%, var(--color-mid-blue-gradient-start) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.service-page-section p {
+    font-size: 1.1em;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    text-align: center;
+    color: #444;
+}
+
+.sub-service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.sub-service-card {
+    background-color: var(--color-light-gray);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease;
+}
+
+.sub-service-card:hover {
+    transform: translateY(-5px);
+}
+
+.sub-service-card h4 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: var(--color-dark-blue-primary);
+    position: relative;
+    padding-left: 30px; /* Space for icon */
+}
+
+.sub-service-card h4::before {
+    content: '\f0eb'; /* Lightbulb icon from Font Awesome */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--color-light-blue-gradient-end);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+}
+
+.sub-service-card p {
+    font-size: 0.95em;
+    text-align: left;
+    margin: 0;
+    color: #555;
+}
+
+/* For list-based sections (e.g., Subject Tutoring) */
+.content-columns {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column */
+    gap: 40px;
+    max-width: 900px;
+    margin: 50px auto;
+}
+@media (min-width: 768px) {
+    .content-columns {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    }
+}
+
+.content-column h3 {
+    font-size: 1.6em;
+    color: var(--color-mid-blue-gradient-start);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-column ul {
+    list-style: none; /* Remove default list style */
+    padding: 0;
+}
+
+.content-column ul li {
+    background-color: var(--color-light-gray);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    display: flex;
+    align-items: center;
+}
+
+.content-column ul li i {
+    color: var(--color-light-blue-gradient-end);
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+/* FAQ styles */
+.faq-container {
+    max-width: 800px;
+    margin: 60px auto 0;
+}
+
+.faq-item {
+    background-color: var(--color-light-gray);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--color-dark-blue-primary);
+    background-color: var(--color-white);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    background-color: var(--color-light-gray);
+    color: #555;
+    font-size: 1em;
+}
+
+.faq-answer.active {
+    max-height: 200px; /* Adjust max-height to fit content, a generous value often works */
+    padding: 20px;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .hero-slogan {
@@ -351,6 +530,9 @@ body {
     .service-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
+    .service-page-section h2 {
+        font-size: 2.5em;
+    }
 }
 
 @media (max-width: 768px) {
@@ -361,7 +543,20 @@ body {
         margin-top: 15px;
     }
     .nav a {
-        margin: 0 15px;
+        margin: 0 10px; /* Reduced margin for smaller screens */
+        font-size: 0.95em;
+    }
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .logo-text {
+        font-size: 1.5em;
+        white-space: normal; /* Allow wrapping */
     }
     .hero-slogan {
         font-size: 2.5em;
@@ -375,15 +570,24 @@ body {
     .service-card {
         padding: 30px;
     }
+    .sub-service-grid {
+        grid-template-columns: 1fr;
+    }
+    .sub-service-card h4 {
+        padding-left: 0;
+    }
+    .sub-service-card h4::before {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
-    .logo {
-        font-size: 1.5em;
+    .logo-text {
+        font-size: 1.2em;
     }
     .nav a {
         display: block;
-        margin: 10px 0;
+        margin: 8px 0;
     }
     .hero-slogan {
         font-size: 2em;
@@ -400,5 +604,8 @@ body {
     }
     .contact-form {
         padding: 25px;
+    }
+    .service-page-section h2 {
+        font-size: 2em;
     }
 }
