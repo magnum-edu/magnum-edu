@@ -8,17 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons (optional, but nice for services) -->
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
     <header class="header">
         <div class="container">
-            <h1 class="logo">Magnum Educational Consulting</h1>
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Magnum Educational Consulting Logo" class="header-logo">
+                <h1 class="logo-text">Magnum Educational Consulting</h1>
+            </div>
             <nav class="nav">
-                <a href="#hero">Home</a>
-                <a href="#services">Services</a>
+                <a href="index.html">Home</a>
+                <a href="#services">Services Overview</a>
+                <a href="packages.html">Packages</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -38,31 +42,36 @@
             <div class="container">
                 <h3 class="section-title">Our Comprehensive Services</h3>
                 <div class="service-grid">
-                    <div class="service-card">
+                    <a href="educational-advising.html" class="service-card">
                         <i class="fas fa-graduation-cap service-icon"></i>
-                        <h4>Counselling & Academic Planning</h4>
-                        <p>Personalized guidance for academic success and future pathways.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-hand-holding-usd service-icon"></i>
-                        <h4>Scholarship & Financial Aid Guidance</h4>
-                        <p>Expert assistance in securing funding for your education.</p>
-                    </div>
-                    <div class="service-card">
+                        <h4>Educational Advising & College Counseling</h4>
+                        <p>Personalized guidance for academic success, college admissions, and future pathways.</p>
+                    </a>
+                    <a href="ssat-sat-act.html" class="service-card">
                         <i class="fas fa-chalkboard-teacher service-icon"></i>
                         <h4>SSAT, SAT, & ACT Prep</h4>
                         <p>Targeted strategies and practice for top standardized test scores.</p>
-                    </div>
-                    <div class="service-card">
+                    </a>
+                    <a href="scholarship-financial-aid.html" class="service-card">
+                        <i class="fas fa-hand-holding-usd service-icon"></i>
+                        <h4>Scholarship & Financial Aid Guidance</h4>
+                        <p>Expert assistance in navigating options and securing funding for your education.</p>
+                    </a>
+                    <a href="subject-tutoring.html" class="service-card">
                         <i class="fas fa-book service-icon"></i>
                         <h4>Subject Area Tutoring</h4>
                         <p>Individualized support across various subjects to improve comprehension and grades.</p>
-                    </div>
-                    <div class="service-card">
+                    </a>
+                    <a href="special-ed-advocacy.html" class="service-card">
                         <i class="fas fa-balance-scale service-icon"></i>
-                        <h4>Education Advocacy</h4>
-                        <p>Championing your rights and needs within the educational system.</p>
-                    </div>
+                        <h4>Special Education Advocacy & Executive Functioning</h4>
+                        <p>Championing your rights and needs within the educational system and fostering key skills.</p>
+                    </a>
+                    <a href="home-school-support.html" class="service-card">
+                        <i class="fas fa-home service-icon"></i>
+                        <h4>Home School Support</h4>
+                        <p>Comprehensive guidance and resources for successful home schooling journeys.</p>
+                    </a>
                 </div>
                 <div class="cta-bottom">
                     <a href="#contact" class="button cta-button">Ready to Start? Contact Us Today!</a>
@@ -109,7 +118,7 @@
                 <div class="contact-info">
                     <p><i class="fas fa-envelope"></i> <a href="mailto:info@magnumedu.com">info@magnumedu.com</a></p>
                     <p><i class="fas fa-phone-alt"></i> <a href="tel:+1-555-123-4567">+1 (555) 123-4567</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Education Lane, Learning City, FL 98765</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Education Lane, Learning City, State 98765</p>
                 </div>
             </div>
         </section>
@@ -117,7 +126,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>© 2025 Magnum Educational Consulting. All rights reserved.</p>
+            <p>© 2023 Magnum Educational Consulting. All rights reserved.</p>
         </div>
     </footer>
 
