@@ -7,6 +7,7 @@
     --color-light-blue-gradient-end: #2B88D8; /* Lighter blue for gradients, accents */
     --color-button-hover-start: #2B88D8; /* Slightly different gradient for hover */
     --color-button-hover-end: #1E3F66;
+    --color-text-body: #444; /* General body text color */
 }
 
 /* Global Styles & Resets */
@@ -161,6 +162,13 @@ body {
     z-index: 1;
 }
 
+/* Initial state for hero elements animation */
+.hero-slogan, .hero-tagline, .hero-button, .hero-image-wrapper {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
 .hero-slogan {
     font-size: 4em;
     font-weight: 700;
@@ -178,12 +186,32 @@ body {
     max-width: 800px;
     margin: 0 auto 40px;
     font-weight: 300;
+    text-align: justify; /* justify text alignment */
+    text-align-last: center; /* helps with short lines */
 }
 
 .hero-button {
     padding: 18px 40px;
     font-size: 1.2em;
 }
+
+.hero-image-wrapper {
+    margin-top: 40px;
+    max-width: 600px; /* Control max width of image */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; /* Hide any overflow if image has border-radius */
+    border-radius: 12px; /* Soften edges of the image */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Subtle shadow for the image */
+}
+
+.photo {
+    width: 100%; /* Make image fill its wrapper */
+    height: auto;
+    display: block; /* Remove extra space below image */
+}
+
 
 /* Services Section (on index.html) */
 .services-section {
@@ -228,7 +256,9 @@ body {
 
 .service-card p {
     font-size: 1em;
-    color: #555;
+    color: var(--color-text-body);
+    text-align: justify; /* justify text alignment */
+    text-align-last: center; /* helps with short lines */
 }
 
 .cta-bottom {
@@ -241,13 +271,153 @@ body {
     background-color: var(--color-light-gray);
 }
 
-.about-section p {
-    max-width: 800px;
-    margin: 0 auto 20px;
-    text-align: center;
-    font-size: 1.1em;
-    color: #444;
+.about-content {
+    max-width: 900px;
+    margin: 0 auto 50px; /* Margin to separate bio from testimonials */
 }
+
+.about-content p {
+    font-size: 1.1em;
+    color: var(--color-text-body);
+    margin-bottom: 20px;
+    text-align: justify; /* justify text alignment */
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Testimonial Carousel */
+.testimonials-title {
+    margin-top: 80px; /* Space between bio and testimonials */
+    margin-bottom: 40px;
+}
+
+.testimonial-carousel-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 60px; /* Space above FAU reviews */
+    overflow: hidden; /* Important for hiding extra slides */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-white);
+    padding: 30px; /* Inner padding for content */
+}
+
+.testimonial-carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out; /* Smooth sliding animation */
+}
+
+.testimonial-slide {
+    flex: 0 0 100%; /* Each slide takes 100% width of the container */
+    padding: 20px;
+    text-align: center;
+    color: var(--color-text-body);
+}
+
+.testimonial-quote-icon {
+    font-size: 2.5em;
+    color: var(--color-light-blue-gradient-end);
+    margin-bottom: 15px;
+}
+
+.testimonial-slide p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-style: italic; /* Emphasize quotes */
+    text-align: justify; /* justify text alignment */
+    text-align-last: center; /* helps with short lines */
+}
+
+.testimonial-author {
+    display: block;
+    font-weight: 600;
+    color: var(--color-dark-blue-primary);
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(30, 63, 102, 0.7); /* Semi-transparent background */
+    color: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 10; /* Ensure buttons are above slides */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:hover {
+    background-color: var(--color-light-blue-gradient-end);
+    transform: translateY(-50%) scale(1.05); /* Slight scale on hover */
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(30, 63, 102, 0.4); /* Faded color for inactive dots */
+    margin: 0 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dot.active {
+    background-color: var(--color-light-blue-gradient-end); /* Active dot color */
+    transform: scale(1.2); /* Slightly larger active dot */
+}
+
+/* FAU Reviews Section */
+.fau-reviews-section {
+    max-width: 900px;
+    margin: 60px auto 0;
+    background-color: var(--color-white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.fau-reviews-section .section-title {
+    margin-bottom: 30px;
+    font-size: 2em; /* Slightly smaller title than main section title */
+}
+
+.fau-reviews-section p {
+    font-style: italic;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--color-text-body);
+    text-align: justify; /* justify text alignment */
+    text-align-last: left; /* Helps with these quotes which are typically left-aligned */
+}
+
 
 /* Contact Section */
 .contact-section {
@@ -258,7 +428,9 @@ body {
     text-align: center;
     margin-bottom: 40px;
     font-size: 1.1em;
-    color: #555;
+    color: var(--color-text-body);
+    text-align: justify; /* justify text alignment */
+    text-align-last: center; /* helps with short lines */
 }
 
 .contact-form {
@@ -321,7 +493,7 @@ body {
 
 .contact-info p {
     margin-bottom: 15px;
-    color: #444;
+    color: var(--color-text-body);
 }
 
 .contact-info a {
@@ -372,8 +544,9 @@ body {
     font-size: 1.1em;
     max-width: 900px;
     margin: 0 auto 30px;
-    text-align: center;
-    color: #444;
+    text-align: justify; /* justify text alignment */
+    text-align-last: center; /* helps with short lines */
+    color: var(--color-text-body);
 }
 
 .sub-service-grid {
@@ -418,9 +591,9 @@ body {
 
 .sub-service-card p {
     font-size: 0.95em;
-    text-align: left;
+    text-align: justify; /* justify text alignment */
     margin: 0;
-    color: #555;
+    color: var(--color-text-body);
 }
 
 /* For list-based sections (e.g., Subject Tutoring) */
@@ -457,6 +630,7 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     display: flex;
     align-items: center;
+    color: var(--color-text-body); /* Ensure list item text color is consistent */
 }
 
 .content-column ul li i {
@@ -506,22 +680,13 @@ body {
     overflow: hidden;
     transition: max-height 0.4s ease-out, padding 0.4s ease-out;
     background-color: var(--color-light-gray);
-    color: #555;
+    color: var(--color-text-body);
     font-size: 1em;
 }
 
 .faq-answer.active {
     max-height: 200px; /* Adjust max-height to fit content, a generous value often works */
     padding: 20px;
-}
-
-.photo {
-    border: 0;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    padding: 40px;
 }
 
 /* Responsive Design */
@@ -541,6 +706,18 @@ body {
     }
     .service-page-section h2 {
         font-size: 2.5em;
+    }
+    /* Adjust carousel buttons for smaller screens */
+    .carousel-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+    .carousel-prev {
+        left: 5px;
+    }
+    .carousel-next {
+        right: 5px;
     }
 }
 
@@ -588,6 +765,21 @@ body {
     .sub-service-card h4::before {
         display: none;
     }
+    /* Adjust carousel buttons for mobile */
+    .carousel-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+    .carousel-prev {
+        left: 0px;
+    }
+    .carousel-next {
+        right: 0px;
+    }
+    .testimonial-carousel-container {
+        padding: 15px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -616,5 +808,14 @@ body {
     }
     .service-page-section h2 {
         font-size: 2em;
+    }
+    .testimonial-slide p {
+        font-size: 1em;
+    }
+    .fau-reviews-section {
+        padding: 20px;
+    }
+    .fau-reviews-section .section-title {
+        font-size: 1.6em;
     }
 }
