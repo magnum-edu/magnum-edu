@@ -8,17 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons (optional, but nice for services) -->
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
     <header class="header">
         <div class="container">
-            <h1 class="logo">Magnum Educational Consulting</h1>
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Magnum Educational Consulting Logo" class="header-logo">
+                <h1 class="logo-text">Magnum Educational Consulting</h1>
+            </div>
             <nav class="nav">
-                <a href="#hero">Home</a>
-                <a href="#services">Services</a>
+                <a href="index.html">Home</a>
+                <a href="#services">Services Overview</a>
+                <a href="packages.html">Packages</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -31,6 +35,9 @@
                 <h2 class="hero-slogan">Empower. Achieve. Succeed.</h2>
                 <p class="hero-tagline">Your trusted partner in navigating the educational journey. We provide personalized guidance to unlock your full potential.</p>
                 <a href="#services" class="button hero-button">Explore Our Services</a>
+                <div class="hero-image-wrapper">
+                    <img src="assets/photo.jpg" alt="Girl holding book smiling" class="photo">
+                </div>
             </div>
         </section>
 
@@ -38,31 +45,36 @@
             <div class="container">
                 <h3 class="section-title">Our Comprehensive Services</h3>
                 <div class="service-grid">
-                    <div class="service-card">
+                    <a href="educational-advising.html" class="service-card">
                         <i class="fas fa-graduation-cap service-icon"></i>
-                        <h4>Counselling & Academic Planning</h4>
-                        <p>Personalized guidance for academic success and future pathways.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-hand-holding-usd service-icon"></i>
-                        <h4>Scholarship & Financial Aid Guidance</h4>
-                        <p>Expert assistance in securing funding for your education.</p>
-                    </div>
-                    <div class="service-card">
+                        <h4>Educational Advising & College Counseling</h4>
+                        <p>Personalized guidance for academic success, college admissions, and future pathways.</p>
+                    </a>
+                    <a href="ssat-sat-act.html" class="service-card">
                         <i class="fas fa-chalkboard-teacher service-icon"></i>
                         <h4>SSAT, SAT, & ACT Prep</h4>
                         <p>Targeted strategies and practice for top standardized test scores.</p>
-                    </div>
-                    <div class="service-card">
+                    </a>
+                    <a href="scholarship-financial-aid.html" class="service-card">
+                        <i class="fas fa-hand-holding-usd service-icon"></i>
+                        <h4>Scholarship & Financial Aid Guidance</h4>
+                        <p>Expert assistance in navigating options and securing funding for your education.</p>
+                    </a>
+                    <a href="subject-tutoring.html" class="service-card">
                         <i class="fas fa-book service-icon"></i>
                         <h4>Subject Area Tutoring</h4>
                         <p>Individualized support across various subjects to improve comprehension and grades.</p>
-                    </div>
-                    <div class="service-card">
+                    </a>
+                    <a href="special-ed-advocacy.html" class="service-card">
                         <i class="fas fa-balance-scale service-icon"></i>
-                        <h4>Education Advocacy</h4>
-                        <p>Championing your rights and needs within the educational system.</p>
-                    </div>
+                        <h4>Special Education Advocacy & Executive Functioning</h4>
+                        <p>Championing your rights and needs within the educational system and fostering key skills.</p>
+                    </a>
+                    <a href="home-school-support.html" class="service-card">
+                        <i class="fas fa-home service-icon"></i>
+                        <h4>Home School Support</h4>
+                        <p>Comprehensive guidance and resources for successful home schooling journeys.</p>
+                    </a>
                 </div>
                 <div class="cta-bottom">
                     <a href="#contact" class="button cta-button">Ready to Start? Contact Us Today!</a>
@@ -73,8 +85,67 @@
         <section id="about" class="about-section section-padding">
             <div class="container">
                 <h3 class="section-title">About Magnum Educational Consulting</h3>
-                <p>Magnum Educational Consulting is dedicated to fostering academic excellence and personal growth. We believe that every student has unique strengths and potential, and our mission is to provide the tailored support needed to achieve their educational aspirations. Our team of experienced consultants and tutors is committed to delivering high-quality, results-driven guidance.</p>
-                <p>We work collaboratively with students and families to create a supportive learning environment, address specific challenges, and celebrate every success along the way. With a holistic approach, we don't just focus on grades, but on developing critical thinking, confidence, and lifelong learning skills.</p>
+                <div class="about-content">
+                    <p><strong>Laura Atkinson, M.Ed., M.Sc.</strong><br>Founder & Educational Consultant</p>
+                    <p>In 2012, Laura Atkinson began her career teaching secondary mathematics and has since advanced through roles as Special Education Coordinator, Academic Dean, Secondary School Principal, and University Instructor. In 2023, she founded Magnum Educational Consulting to bring a holistic, student-centered approach to academic success.</p>
+                    <p>Laura holds a Bachelor of Science degree from Nova Southeastern University and two Master’s degrees, one in Exercise Science and another in Special Education, from Florida Atlantic University. She also holds professional teaching certifications in Exceptional Student Education, Mathematics, Social Studies, and Biology, as well as endorsements in Reading and Autism Spectrum Disorders.</p>
+                    <p>Laura’s extensive experience across both traditional and non-traditional educational settings, including traditional public schools, elite private schools, admission-selective charter schools, and one-on-one tutoring, makes her an exceptional choice to guide your student toward academic success. Additionally, her background as both a former SAT and ACT Testing and SSD Coordinator equips her with valuable insights into standardized testing and the accommodations process.</p>
+                    <p>Her commitment to the development and implementation of academic experiences is driven by a deep-rooted passion for motivating not only her most ambitious students, but also her most unenthusiastic ones. Beyond academics, Laura is dedicated to helping students build executive functioning skills, improve their interpersonal communication, and become their own advocates. Her personalized approach includes student-centered tutoring, college counseling, and curriculum development to meet each student’s unique needs.</p>
+                    <p>With her versatile background and dedication to individualized learning, Laura empowers students with the tools, confidence, and mindset they need to excel both in and out of the classroom.</p>
+                </div>
+
+                <h3 class="section-title testimonials-title">What Our Students & Parents Say</h3>
+                <div class="testimonial-carousel-container">
+                    <div class="testimonial-carousel-track">
+                        <div class="testimonial-slide">
+                            <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                            <p>Ms. Atkinson has had such a positive impact on me, especially in high school when I needed some extra help in math but she’s so much more than a tutor. She’s someone I could always talk to about anything and who helped me in every way she could. Even when she stopped working at my high school, I continued a relationship with her because she knew how I learned and she was able to explain things in a way that I understood. She really took the time to understand how I process information and made it so I found it way easier than the way my teachers explained it. In the past I have had tutors who made the sessions boring and I would dread going too, but I looked forward to going to tutoring with her not only because of how beneficial it was but because of her positive and upbeat personality!</p>
+                            <span class="testimonial-author">- Lauren S.</span>
+                        </div>
+                        <div class="testimonial-slide">
+                            <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                            <p>Laura was an incredible help during my college math classes. I always felt completely comfortable working with her, and she helped me feel more confident after every session. She adapted so well to my learning style and needs, making complex topics much easier to understand. Thanks to her support, I was able to meet my academic goals. I highly recommend her to anyone looking for a patient, knowledgeable, and supportive tutor!</p>
+                            <span class="testimonial-author">- Brianna C.</span>
+                        </div>
+                        <div class="testimonial-slide">
+                            <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                            <p>Laura is an experienced and talented educator who works hard to understand her students and how they learn so that she can meet their educational needs. I worked with her for years and saw how dedicated she is to not only teaching the subject material, but also building a relationship with her students and guiding them towards a successful future. She is certified in multiple subject areas and experienced in preparing students for SAT/ACT examinations. Laura will work hard to ensure that your child gets the one on one tutoring that they deserve and the valuable counseling to prepare them for their future.</p>
+                            <span class="testimonial-author">- Amanda C.</span>
+                        </div>
+                        <div class="testimonial-slide">
+                            <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                            <p>Working with Laura Atkinson has been an absolute game changer for my son. Not only did she help him improve his grades in his classes, she also helped him with his organizational skills. Laura’s support during the college application and enrollment process was also great, and it felt like a huge burden was taken off my plate. I can’t thank Laura enough for her dedication and expertise!</p>
+                            <span class="testimonial-author">- Steve F.</span>
+                        </div>
+                        <div class="testimonial-slide">
+                            <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                            <p>Ms Atkinson is more than just a teacher. She is a mentor. She has a unique ability to help her students understand what they need and then advocate for themselves. She has given students the ability to rely on someone, to help them develop their plan and/or strategy for learning more efficiently, confidently, so they can be accountable. To summarize, Ms Atkinson is the type of teacher that makes a lasting impression on her students; the kind of impression that students (and parents) go back to the school just to say "thank you".</p>
+                            <span class="testimonial-author">- Jennifer S.</span>
+                        </div>
+                        <div class="testimonial-slide">
+                            <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                            <p>I had the pleasure and privilege of being a student of Ms. Laura Atkinson from 2014-2016. Laura is an exemplary professional in education, due to her commitment to the quality of her learners’ educational experience. She fosters a truly supportive classroom environment where students feel empowered to participate in discussions, make connections with their peers and seek deeper understanding of content. Laura is an asset to any institution she may work at in the future, and I can personally say that my interest in several academic subjects can be accredited to this committed, engaging and knowledgeable educator.</p>
+                            <span class="testimonial-author">- Bryanna B.</span>
+                        </div>
+                        <div class="testimonial-slide">
+                            <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                            <p>I cannot recommend Laura Atkinson enough! She was my favorite teacher in high school—not just because of how amazing she is at teaching, but because of how much she truly cares. She always went above and beyond to make sure I understood the material and felt supported, both academically and personally. Her compassion and patience made a huge difference in my life. She helped me find my love for psychology! Now that she’s starting her own tutoring and college counseling business, I know so many students are going to benefit from her incredible guidance, knowledge, and kindness. If you’re looking for someone who truly understands how to support students academically and emotionally, Laura Atkinson is the person to go to.</p>
+                            <span class="testimonial-author">- Gabby C.</span>
+                        </div>
+                    </div>
+                    <button class="carousel-button carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-button carousel-next"><i class="fas fa-chevron-right"></i></button>
+                    <div class="carousel-dots"></div>
+                </div>
+
+                <div class="fau-reviews-section">
+                    <h3 class="section-title testimonials-title">University Instructor Reviews (Anonymous)</h3>
+                    <p>"I really like how Professor Atkinson would give specific reactions to my journals. Her answers were not just generic reactions, they added insight and it showed she really cared which was nice!"</p>
+                    <p>"Professor Atkinson was very helpful, encouraging, polite, and patient. She knew what she was talking about and prepared the class for everything."</p>
+                    <p>"Prof. A was amazing!!! Great feedback made me enjoy learning. I had a lot of great takeaways from this class to add to my career and daily life. Would definitely take her class again!!!"</p>
+                    <p>"I appreciated when Professor A would take the time to write a thoughtful response to all my journals. It made me feel like they cared about my writing."</p>
+                    <p>"Professor Atkinson is extremely kind and understanding. When I missed an exam deadline for something out of my control, she very graciously opened it again for me to take so my grade would not be impacted. I would recommend her as a teacher to anybody!"</p>
+                </div>
             </div>
         </section>
 
@@ -109,7 +180,7 @@
                 <div class="contact-info">
                     <p><i class="fas fa-envelope"></i> <a href="mailto:info@magnumedu.com">info@magnumedu.com</a></p>
                     <p><i class="fas fa-phone-alt"></i> <a href="tel:+1-555-123-4567">+1 (555) 123-4567</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Education Lane, Learning City, FL 98765</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Education Lane, Learning City, State 98765</p>
                 </div>
             </div>
         </section>
@@ -117,7 +188,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>© 2025 Magnum Educational Consulting. All rights reserved.</p>
+            <p>© 2023 Magnum Educational Consulting. All rights reserved.</p>
         </div>
     </footer>
 
