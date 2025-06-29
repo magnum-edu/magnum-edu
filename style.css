@@ -186,8 +186,7 @@ body {
     max-width: 800px;
     margin: 0 auto 40px;
     font-weight: 300;
-    text-align: justify; /* justify text alignment */
-    text-align-last: center; /* helps with short lines */
+    text-align: left; /* CHANGED */
 }
 
 .hero-button {
@@ -257,8 +256,7 @@ body {
 .service-card p {
     font-size: 1em;
     color: var(--color-text-body);
-    text-align: justify; /* justify text alignment */
-    text-align-last: center; /* helps with short lines */
+    text-align: left; /* CHANGED */
 }
 
 .cta-bottom {
@@ -280,7 +278,7 @@ body {
     font-size: 1.1em;
     color: var(--color-text-body);
     margin-bottom: 20px;
-    text-align: justify; /* justify text alignment */
+    text-align: left; /* CHANGED */
 }
 
 .about-content p:last-child {
@@ -296,7 +294,7 @@ body {
 .testimonial-carousel-container {
     position: relative;
     max-width: 900px;
-    margin: 0 auto 60px; /* Space above FAU reviews */
+    margin: 0 auto 60px; /* Space for layout */
     overflow: hidden; /* Important for hiding extra slides */
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -327,7 +325,7 @@ body {
     line-height: 1.8;
     margin-bottom: 20px;
     font-style: italic; /* Emphasize quotes */
-    text-align: justify; /* justify text alignment */
+    text-align: justify; /* KEPT AS IS per request */
     text-align-last: center; /* helps with short lines */
 }
 
@@ -393,32 +391,6 @@ body {
     transform: scale(1.2); /* Slightly larger active dot */
 }
 
-/* FAU Reviews Section */
-.fau-reviews-section {
-    max-width: 900px;
-    margin: 60px auto 0;
-    background-color: var(--color-white);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
-
-.fau-reviews-section .section-title {
-    margin-bottom: 30px;
-    font-size: 2em; /* Slightly smaller title than main section title */
-}
-
-.fau-reviews-section p {
-    font-style: italic;
-    font-size: 1em;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    color: var(--color-text-body);
-    text-align: justify; /* justify text alignment */
-    text-align-last: left; /* Helps with these quotes which are typically left-aligned */
-}
-
-
 /* Contact Section */
 .contact-section {
     background-color: var(--color-white);
@@ -429,66 +401,16 @@ body {
     margin-bottom: 40px;
     font-size: 1.1em;
     color: var(--color-text-body);
-    text-align: justify; /* justify text alignment */
-    text-align-last: center; /* helps with short lines */
-}
-
-.contact-form {
+    text-align: left; /* CHANGED */
     max-width: 600px;
-    margin: 0 auto 50px;
-    padding: 40px;
-    background-color: var(--color-light-gray);
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: var(--color-dark-blue-primary);
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1em;
-    color: var(--color-dark-blue-primary);
-    background-color: var(--color-white);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--color-light-blue-gradient-end);
-    box-shadow: 0 0 0 3px rgba(43, 136, 216, 0.2);
-    outline: none;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-.submit-button {
-    width: 100%;
-    padding: 18px;
-    font-size: 1.2em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-info {
     text-align: center;
     font-size: 1.1em;
-    margin-top: 30px;
+    margin-top: 50px; /* Increased margin to space from button */
 }
 
 .contact-info p {
@@ -544,8 +466,7 @@ body {
     font-size: 1.1em;
     max-width: 900px;
     margin: 0 auto 30px;
-    text-align: justify; /* justify text alignment */
-    text-align-last: center; /* helps with short lines */
+    text-align: left; /* CHANGED */
     color: var(--color-text-body);
 }
 
@@ -591,7 +512,7 @@ body {
 
 .sub-service-card p {
     font-size: 0.95em;
-    text-align: justify; /* justify text alignment */
+    text-align: left; /* CHANGED */
     margin: 0;
     color: var(--color-text-body);
 }
@@ -803,19 +724,10 @@ body {
     .service-grid {
         grid-template-columns: 1fr;
     }
-    .contact-form {
-        padding: 25px;
-    }
     .service-page-section h2 {
         font-size: 2em;
     }
     .testimonial-slide p {
         font-size: 1em;
-    }
-    .fau-reviews-section {
-        padding: 20px;
-    }
-    .fau-reviews-section .section-title {
-        font-size: 1.6em;
     }
 }
